@@ -29,3 +29,7 @@ end
 def multiply(x, y)
   x * y
 end
+
+def product(array)
+  array.reduce(1, :*)
+end
