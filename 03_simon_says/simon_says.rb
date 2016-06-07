@@ -13,3 +13,7 @@ end
 def start_of_word(input, letters)
   input[0...letters] # note that if string = "hello", then string[0..1] will give str (so exclude last letter by 0...1)
 end
+
+def first_word(input)
+  input.split[0]
+end
