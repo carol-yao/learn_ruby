@@ -13,10 +13,10 @@ def sum(array)
   array.inject do |sum, i|
     sum + i
   end
-end
+  end
 end
 
-# Note that these both methods work for sum
+# Both methods work for sum
 
 # def sum(array)
 #   if array == []
@@ -33,3 +33,13 @@ end
 def product(array)
   array.reduce(1, :*)
 end
+
+def factorial(x)
+  (1..x).reduce(1, :*)
+end
+
+# This factorial method uses product
+
+# def factorial(x)
+#   product(1..x)
+# end
