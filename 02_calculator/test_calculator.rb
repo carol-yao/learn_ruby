@@ -1,11 +1,7 @@
 require './test_helper'
-# In this problem we are going to make a calculator.
-
-# Remember to create the file!
 require 'calculator'
 
 class TestCalculator < MiniTest::Test
-  # add takes two parameters and adds them
   def test_adds_0_and_0
     assert_equal 0, add(0, 0)
   end
@@ -18,13 +14,10 @@ class TestCalculator < MiniTest::Test
     assert_equal 8, add(2, 6)
   end
 
- # subtract takes two parameters and subtracts the second from the first
   def test_subtracts_numbers
     assert_equal 6, subtract(10, 4)
   end
 
-# sum takes an *array* of numbers and adds them all together
-# This one is a bit trickier!
   def test_computes_sum_of_empty_array
     assert_equal(0, sum([]))
   end
