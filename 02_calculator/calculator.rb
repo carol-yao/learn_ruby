@@ -13,5 +13,19 @@ def sum(array)
   array.inject do |sum, i|
     sum + i
   end
-end 
+end
+end
+
+# Note that these both methods work for sum
+
+# def sum(array)
+#   if array == []
+#     0
+#   else
+#   array.reduce(:+)
+# end
+# end
+
+def multiply(x, y)
+  x * y
 end
