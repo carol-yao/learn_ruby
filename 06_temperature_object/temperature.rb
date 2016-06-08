@@ -44,3 +44,11 @@ class Celsius < Temperature
   end
 
 end
+
+class Fahrenheit < Temperature
+
+  def initialize(temperature)
+    super(f: temperature)
+  end
+
+end

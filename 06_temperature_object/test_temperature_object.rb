@@ -66,14 +66,14 @@ class TestTemperature < MiniTest::Test
     assert_equal Temperature, Celsius.superclass
   end
   #
-  # def test_fahrenheit_subclass_initialize
-  #   assert_equal 50, Fahrenheit.new(50).to_fahrenheit
-  #   assert_equal 10, Fahrenheit.new(50).to_celsius
-  # end
-  #
-  # def test_fahrenheit_is_temperature_subclass
-  #   assert_equal Temperature, Fahrenheit.superclass
-  # end
+  def test_fahrenheit_subclass_initialize
+    assert_equal 50, Fahrenheit.new(50).to_fahrenheit
+    assert_equal 10, Fahrenheit.new(50).to_celsius
+  end
+
+  def test_fahrenheit_is_temperature_subclass
+    assert_equal Temperature, Fahrenheit.superclass
+  end
 
 
   # Extra credit:
