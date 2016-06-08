@@ -57,23 +57,14 @@ class TestTemperature < MiniTest::Test
   end
 
   #  Temperature subclasses
-  # def test_celsius_subclass_initialize
-  #   assert_equal 50, Celsius.new(50).to_celsius
-  #   assert_equal 122, Celsius.new(50).to_fahrenheit
-  #
-  #   # Again, this is a different way of doing the same thing.
-  #   # Instead of initializing a new Temperature with a hash that has a key "c",
-  #   # we're just initializing a new Celsius.
-  # end
+  def test_celsius_subclass_initialize
+    assert_equal 50, Celsius.new(50).to_celsius
+    assert_equal 122, Celsius.new(50).to_fahrenheit
+  end
 
-  # def test_celsius_is_temperature_subclass
-  #   # In other words, Celsius *inherits* from Temperature.
-  #   assert_equal Temperature, Celsius.superclass
-  #   # Remember class inheritance?
-  #   #
-  #   # class Person < Mammal
-  #   # end
-  # end
+  def test_celsius_is_temperature_subclass
+    assert_equal Temperature, Celsius.superclass
+  end
   #
   # def test_fahrenheit_subclass_initialize
   #   assert_equal 50, Fahrenheit.new(50).to_fahrenheit

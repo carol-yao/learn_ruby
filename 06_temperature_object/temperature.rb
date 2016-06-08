@@ -33,6 +33,14 @@ class Temperature
   end
 
   def self.in_fahrenheit(temperature)
-    self.new(f: temperature) 
+    self.new(f: temperature)
   end
+end
+
+class Celsius < Temperature
+
+  def initialize(temperature)
+    super(c: temperature)
+  end
+
 end
