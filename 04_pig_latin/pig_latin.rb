@@ -12,7 +12,7 @@ def translate(string)
       if word.start_with?('qu')
       ending << "qu"
       beginning.slice!(0, 2)
-      break
+      break # note that this break assumes that there exists no words where "qu" precedes a consonant
     end
       ending << beginning.split("").shift
       beginning.slice!(0)
