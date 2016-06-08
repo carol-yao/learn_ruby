@@ -17,3 +17,22 @@ end
 def first_word(input)
   input.split[0]
 end
+
+def titleize(input)
+  array = input.split
+  first_word = array[0].capitalize
+  array.shift
+
+  array = array.map do |word|
+    if word.size > 4
+      word.capitalize
+    else
+      word
+    end
+  end
+  if array.length == 0
+    first_word
+  else
+  "#{first_word} #{array * " "}"
+  end
+end
