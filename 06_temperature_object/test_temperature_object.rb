@@ -51,10 +51,10 @@ class TestTemperature < MiniTest::Test
     assert_equal 122, Temperature.in_celsius(50).to_fahrenheit
   end
 
-  # def test_in_fahrenheit
-  #   assert_equal 50, Temperature.in_fahrenheit(50).to_fahrenheit
-  #   assert_equal 10, Temperature.in_fahrenheit(50).to_celsius
-  # end
+  def test_in_fahrenheit
+    assert_equal 50, Temperature.in_fahrenheit(50).to_fahrenheit
+    assert_equal 10, Temperature.in_fahrenheit(50).to_celsius
+  end
 
   #  Temperature subclasses
   # def test_celsius_subclass_initialize

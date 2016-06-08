@@ -7,7 +7,7 @@ class Temperature
   def to_fahrenheit
     celsius = 0
     @hash.each do |key, value|
-      if key == :f
+      if key == :f # note that hash keys have to be :f format
         celsius = value
       else
         celsius = (value * 9.0/5.0) + 32
@@ -29,7 +29,10 @@ class Temperature
   end
 
   def self.in_celsius(temperature)
-    self.new(c: temperature)
+    self.new(c: temperature) # but hashes can be in the format c: temp
   end
 
+  def self.in_fahrenheit(temperature)
+    self.new(f: temperature) 
+  end
 end
