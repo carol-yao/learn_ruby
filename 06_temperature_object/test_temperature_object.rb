@@ -46,25 +46,10 @@ class TestTemperature < MiniTest::Test
 
   # constructing factory methods
 
-  # def test_in_celsius
-  #   assert_equal 50, Temperature.in_celsius(50).to_celsius
-    # assert_equal 122, Temperature.in_celsius(50).to_fahrenheit
-
-    # Nothing different is being achieved with these two lines,
-    # they're just a different way of doing the same thing,
-    # that requires you to write your code another way.
-    #
-    # Remember, methods called on a class are called class methods.
-    # Here's an example:
-    #
-    # class Person
-    #   def self.what_am_i
-    #     return "I am a person."
-    #   end
-    # end
-    #
-    # Person.what_am_i # => "I am a person."
-  # end
+  def test_in_celsius
+    assert_equal 50, Temperature.in_celsius(50).to_celsius
+    assert_equal 122, Temperature.in_celsius(50).to_fahrenheit
+  end
 
   # def test_in_fahrenheit
   #   assert_equal 50, Temperature.in_fahrenheit(50).to_fahrenheit
@@ -75,10 +60,10 @@ class TestTemperature < MiniTest::Test
   # def test_celsius_subclass_initialize
   #   assert_equal 50, Celsius.new(50).to_celsius
   #   assert_equal 122, Celsius.new(50).to_fahrenheit
-
-    # Again, this is a different way of doing the same thing.
-    # Instead of initializing a new Temperature with a hash that has a key "c",
-    # we're just initializing a new Celsius.
+  #
+  #   # Again, this is a different way of doing the same thing.
+  #   # Instead of initializing a new Temperature with a hash that has a key "c",
+  #   # we're just initializing a new Celsius.
   # end
 
   # def test_celsius_is_temperature_subclass

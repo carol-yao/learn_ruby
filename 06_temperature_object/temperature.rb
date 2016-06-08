@@ -28,5 +28,8 @@ class Temperature
     fahrenheit
   end
 
+  def self.in_celsius(temperature)
+    self.new(c: temperature)
+  end
 
 end
