@@ -19,15 +19,16 @@ def first_word(input)
 end
 
 def titleize(input)
+  ignore = ['the', 'and', 'over']
   array = input.split
   first_word = array[0].capitalize
   array.shift
 
   array = array.map do |word|
-    if word.size > 4
-      word.capitalize
-    else
+    if ignore.include?(word)
       word
+    else
+      word.capitalize
     end
   end
   if array.length == 0
